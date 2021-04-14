@@ -21,6 +21,8 @@ public class SimpleCalculator {
 
         System.out.println("Enter second number");
         number2 = input.nextDouble();
+		if(operator == '/')
+			number2=checkNumber(number2,input);
 
         switch (operator) {
 
@@ -53,4 +55,10 @@ public class SimpleCalculator {
     }
 }
 
-
+public static Double checkNumber(Double number2, Scanner sc) {
+        while(number2 == 0) {
+            System.out.println("Enter non-zero number as Number 2");
+            number2 = sc.nextDouble();
+        }
+        return number2;
+    }
