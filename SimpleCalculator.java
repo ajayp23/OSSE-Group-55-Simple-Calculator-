@@ -12,7 +12,7 @@ public class SimpleCalculator {
         Scanner input = new Scanner(System.in);
 
         // ask users to enter operator
-        System.out.println("Choose an operator: +, -, /");
+        System.out.println("Choose an operator: +, -, *, /");
         operator = input.next().charAt(0);
 
         // ask users to enter numbers
@@ -37,7 +37,10 @@ public class SimpleCalculator {
                 break;
 
             // performs multiplication between numbers
-            //TO DO
+            case '*':
+                result = number1 * number2;
+                System.out.println(number1 + " * " + number2 + " = " + result);
+                break;
 
 			// performs division between numbers
             case '/':
