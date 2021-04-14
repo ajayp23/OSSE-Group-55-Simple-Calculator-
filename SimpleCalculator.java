@@ -49,6 +49,11 @@ public class SimpleCalculator {
                 result = number1 / number2;
                 System.out.println(number1 + " / " + number2 + " = " + result);
                 break;
+				
+			//fixed issue #6	
+			default:
+                System.out.println("Invalid operator!");
+                break;	
         }
 
         input.close();
